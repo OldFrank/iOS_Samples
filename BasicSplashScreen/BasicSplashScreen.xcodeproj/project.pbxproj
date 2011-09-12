@@ -1,0 +1,365 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EC8B8D7F141D139F00F57305 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC8B8D7E141D139F00F57305 /* UIKit.framework */; };
+		EC8B8D81141D139F00F57305 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC8B8D80141D139F00F57305 /* Foundation.framework */; };
+		EC8B8D83141D139F00F57305 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC8B8D82141D139F00F57305 /* CoreGraphics.framework */; };
+		EC8B8D89141D139F00F57305 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EC8B8D87141D139F00F57305 /* InfoPlist.strings */; };
+		EC8B8D8B141D139F00F57305 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EC8B8D8A141D139F00F57305 /* main.m */; };
+		EC8B8D8F141D139F00F57305 /* BasicSplashScreenAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EC8B8D8E141D139F00F57305 /* BasicSplashScreenAppDelegate.m */; };
+		EC8B8D93141D139F00F57305 /* BasicSplashScreenAppDelegate_iPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = EC8B8D92141D139F00F57305 /* BasicSplashScreenAppDelegate_iPhone.m */; };
+		EC8B8D96141D139F00F57305 /* MainWindow_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC8B8D94141D139F00F57305 /* MainWindow_iPhone.xib */; };
+		EC8B8D9A141D139F00F57305 /* BasicSplashScreenAppDelegate_iPad.m in Sources */ = {isa = PBXBuildFile; fileRef = EC8B8D99141D139F00F57305 /* BasicSplashScreenAppDelegate_iPad.m */; };
+		EC8B8D9D141D139F00F57305 /* MainWindow_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC8B8D9B141D139F00F57305 /* MainWindow_iPad.xib */; };
+		EC8B8DA7141D156100F57305 /* SplashScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = EC8B8DA5141D156100F57305 /* SplashScreen.m */; };
+		EC974406141D1B4E0016CAEE /* SplashScreen_iPad.m in Sources */ = {isa = PBXBuildFile; fileRef = EC974405141D1B4E0016CAEE /* SplashScreen_iPad.m */; };
+		EC974410141D1DEB0016CAEE /* iPadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC97440F141D1DEB0016CAEE /* iPadViewController.m */; };
+		EC974436141D24760016CAEE /* Default-Landscape~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = EC974432141D24760016CAEE /* Default-Landscape~ipad.png */; };
+		EC974437141D24760016CAEE /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EC974433141D24760016CAEE /* Default@2x.png */; };
+		EC974438141D24760016CAEE /* Default~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = EC974434141D24760016CAEE /* Default~ipad.png */; };
+		EC974439141D24760016CAEE /* splash_background_ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = EC974435141D24760016CAEE /* splash_background_ipad.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		EC8B8D7A141D139F00F57305 /* BasicSplashScreen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BasicSplashScreen.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC8B8D7E141D139F00F57305 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		EC8B8D80141D139F00F57305 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		EC8B8D82141D139F00F57305 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		EC8B8D86141D139F00F57305 /* BasicSplashScreen-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BasicSplashScreen-Info.plist"; sourceTree = "<group>"; };
+		EC8B8D88141D139F00F57305 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		EC8B8D8A141D139F00F57305 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EC8B8D8C141D139F00F57305 /* BasicSplashScreen-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BasicSplashScreen-Prefix.pch"; sourceTree = "<group>"; };
+		EC8B8D8D141D139F00F57305 /* BasicSplashScreenAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BasicSplashScreenAppDelegate.h; sourceTree = "<group>"; };
+		EC8B8D8E141D139F00F57305 /* BasicSplashScreenAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BasicSplashScreenAppDelegate.m; sourceTree = "<group>"; };
+		EC8B8D91141D139F00F57305 /* BasicSplashScreenAppDelegate_iPhone.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = BasicSplashScreenAppDelegate_iPhone.h; path = iPhone/BasicSplashScreenAppDelegate_iPhone.h; sourceTree = "<group>"; };
+		EC8B8D92141D139F00F57305 /* BasicSplashScreenAppDelegate_iPhone.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = BasicSplashScreenAppDelegate_iPhone.m; path = iPhone/BasicSplashScreenAppDelegate_iPhone.m; sourceTree = "<group>"; };
+		EC8B8D95141D139F00F57305 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = iPhone/en.lproj/MainWindow_iPhone.xib; sourceTree = "<group>"; };
+		EC8B8D98141D139F00F57305 /* BasicSplashScreenAppDelegate_iPad.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = BasicSplashScreenAppDelegate_iPad.h; path = iPad/BasicSplashScreenAppDelegate_iPad.h; sourceTree = "<group>"; };
+		EC8B8D99141D139F00F57305 /* BasicSplashScreenAppDelegate_iPad.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = BasicSplashScreenAppDelegate_iPad.m; path = iPad/BasicSplashScreenAppDelegate_iPad.m; sourceTree = "<group>"; };
+		EC8B8D9C141D139F00F57305 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = iPad/en.lproj/MainWindow_iPad.xib; sourceTree = "<group>"; };
+		EC8B8DA4141D156100F57305 /* SplashScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplashScreen.h; sourceTree = "<group>"; };
+		EC8B8DA5141D156100F57305 /* SplashScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SplashScreen.m; sourceTree = "<group>"; };
+		EC8B8DA6141D156100F57305 /* SplashScreenDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplashScreenDelegate.h; sourceTree = "<group>"; };
+		EC974404141D1B4E0016CAEE /* SplashScreen_iPad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplashScreen_iPad.h; sourceTree = "<group>"; };
+		EC974405141D1B4E0016CAEE /* SplashScreen_iPad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SplashScreen_iPad.m; sourceTree = "<group>"; };
+		EC97440E141D1DEB0016CAEE /* iPadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iPadViewController.h; sourceTree = "<group>"; };
+		EC97440F141D1DEB0016CAEE /* iPadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iPadViewController.m; sourceTree = "<group>"; };
+		EC974432141D24760016CAEE /* Default-Landscape~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape~ipad.png"; sourceTree = "<group>"; };
+		EC974433141D24760016CAEE /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		EC974434141D24760016CAEE /* Default~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default~ipad.png"; sourceTree = "<group>"; };
+		EC974435141D24760016CAEE /* splash_background_ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splash_background_ipad.png; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EC8B8D77141D139F00F57305 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC8B8D7F141D139F00F57305 /* UIKit.framework in Frameworks */,
+				EC8B8D81141D139F00F57305 /* Foundation.framework in Frameworks */,
+				EC8B8D83141D139F00F57305 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EC8B8D6F141D139F00F57305 = {
+			isa = PBXGroup;
+			children = (
+				EC8B8D84141D139F00F57305 /* BasicSplashScreen */,
+				EC8B8D7D141D139F00F57305 /* Frameworks */,
+				EC8B8D7B141D139F00F57305 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EC8B8D7B141D139F00F57305 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EC8B8D7A141D139F00F57305 /* BasicSplashScreen.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EC8B8D7D141D139F00F57305 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EC8B8D7E141D139F00F57305 /* UIKit.framework */,
+				EC8B8D80141D139F00F57305 /* Foundation.framework */,
+				EC8B8D82141D139F00F57305 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EC8B8D84141D139F00F57305 /* BasicSplashScreen */ = {
+			isa = PBXGroup;
+			children = (
+				EC8B8D8D141D139F00F57305 /* BasicSplashScreenAppDelegate.h */,
+				EC8B8D8E141D139F00F57305 /* BasicSplashScreenAppDelegate.m */,
+				EC974431141D24760016CAEE /* Images */,
+				EC8B8DA3141D156100F57305 /* SplashScreen */,
+				EC8B8D90141D139F00F57305 /* iPhone */,
+				EC8B8D97141D139F00F57305 /* iPad */,
+				EC8B8D85141D139F00F57305 /* Supporting Files */,
+			);
+			path = BasicSplashScreen;
+			sourceTree = "<group>";
+		};
+		EC8B8D85141D139F00F57305 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EC8B8D86141D139F00F57305 /* BasicSplashScreen-Info.plist */,
+				EC8B8D87141D139F00F57305 /* InfoPlist.strings */,
+				EC8B8D8A141D139F00F57305 /* main.m */,
+				EC8B8D8C141D139F00F57305 /* BasicSplashScreen-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EC8B8D90141D139F00F57305 /* iPhone */ = {
+			isa = PBXGroup;
+			children = (
+				EC8B8D91141D139F00F57305 /* BasicSplashScreenAppDelegate_iPhone.h */,
+				EC8B8D92141D139F00F57305 /* BasicSplashScreenAppDelegate_iPhone.m */,
+				EC8B8D94141D139F00F57305 /* MainWindow_iPhone.xib */,
+			);
+			name = iPhone;
+			sourceTree = "<group>";
+		};
+		EC8B8D97141D139F00F57305 /* iPad */ = {
+			isa = PBXGroup;
+			children = (
+				EC97440E141D1DEB0016CAEE /* iPadViewController.h */,
+				EC97440F141D1DEB0016CAEE /* iPadViewController.m */,
+				EC8B8D98141D139F00F57305 /* BasicSplashScreenAppDelegate_iPad.h */,
+				EC8B8D99141D139F00F57305 /* BasicSplashScreenAppDelegate_iPad.m */,
+				EC8B8D9B141D139F00F57305 /* MainWindow_iPad.xib */,
+			);
+			name = iPad;
+			sourceTree = "<group>";
+		};
+		EC8B8DA3141D156100F57305 /* SplashScreen */ = {
+			isa = PBXGroup;
+			children = (
+				EC8B8DA4141D156100F57305 /* SplashScreen.h */,
+				EC8B8DA5141D156100F57305 /* SplashScreen.m */,
+				EC8B8DA6141D156100F57305 /* SplashScreenDelegate.h */,
+				EC974404141D1B4E0016CAEE /* SplashScreen_iPad.h */,
+				EC974405141D1B4E0016CAEE /* SplashScreen_iPad.m */,
+			);
+			path = SplashScreen;
+			sourceTree = "<group>";
+		};
+		EC974431141D24760016CAEE /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				EC974432141D24760016CAEE /* Default-Landscape~ipad.png */,
+				EC974433141D24760016CAEE /* Default@2x.png */,
+				EC974434141D24760016CAEE /* Default~ipad.png */,
+				EC974435141D24760016CAEE /* splash_background_ipad.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EC8B8D79141D139F00F57305 /* BasicSplashScreen */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EC8B8DA0141D139F00F57305 /* Build configuration list for PBXNativeTarget "BasicSplashScreen" */;
+			buildPhases = (
+				EC8B8D76141D139F00F57305 /* Sources */,
+				EC8B8D77141D139F00F57305 /* Frameworks */,
+				EC8B8D78141D139F00F57305 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BasicSplashScreen;
+			productName = BasicSplashScreen;
+			productReference = EC8B8D7A141D139F00F57305 /* BasicSplashScreen.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EC8B8D71141D139F00F57305 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = EC8B8D74141D139F00F57305 /* Build configuration list for PBXProject "BasicSplashScreen" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = EC8B8D6F141D139F00F57305;
+			productRefGroup = EC8B8D7B141D139F00F57305 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EC8B8D79141D139F00F57305 /* BasicSplashScreen */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EC8B8D78141D139F00F57305 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC8B8D89141D139F00F57305 /* InfoPlist.strings in Resources */,
+				EC8B8D96141D139F00F57305 /* MainWindow_iPhone.xib in Resources */,
+				EC8B8D9D141D139F00F57305 /* MainWindow_iPad.xib in Resources */,
+				EC974436141D24760016CAEE /* Default-Landscape~ipad.png in Resources */,
+				EC974437141D24760016CAEE /* Default@2x.png in Resources */,
+				EC974438141D24760016CAEE /* Default~ipad.png in Resources */,
+				EC974439141D24760016CAEE /* splash_background_ipad.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EC8B8D76141D139F00F57305 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC8B8D8B141D139F00F57305 /* main.m in Sources */,
+				EC8B8D8F141D139F00F57305 /* BasicSplashScreenAppDelegate.m in Sources */,
+				EC8B8D93141D139F00F57305 /* BasicSplashScreenAppDelegate_iPhone.m in Sources */,
+				EC8B8D9A141D139F00F57305 /* BasicSplashScreenAppDelegate_iPad.m in Sources */,
+				EC8B8DA7141D156100F57305 /* SplashScreen.m in Sources */,
+				EC974406141D1B4E0016CAEE /* SplashScreen_iPad.m in Sources */,
+				EC974410141D1DEB0016CAEE /* iPadViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		EC8B8D87141D139F00F57305 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EC8B8D88141D139F00F57305 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		EC8B8D94141D139F00F57305 /* MainWindow_iPhone.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EC8B8D95141D139F00F57305 /* en */,
+			);
+			name = MainWindow_iPhone.xib;
+			sourceTree = "<group>";
+		};
+		EC8B8D9B141D139F00F57305 /* MainWindow_iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EC8B8D9C141D139F00F57305 /* en */,
+			);
+			name = MainWindow_iPad.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EC8B8D9E141D139F00F57305 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EC8B8D9F141D139F00F57305 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EC8B8DA1141D139F00F57305 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BasicSplashScreen/BasicSplashScreen-Prefix.pch";
+				INFOPLIST_FILE = "BasicSplashScreen/BasicSplashScreen-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		EC8B8DA2141D139F00F57305 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BasicSplashScreen/BasicSplashScreen-Prefix.pch";
+				INFOPLIST_FILE = "BasicSplashScreen/BasicSplashScreen-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EC8B8D74141D139F00F57305 /* Build configuration list for PBXProject "BasicSplashScreen" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC8B8D9E141D139F00F57305 /* Debug */,
+				EC8B8D9F141D139F00F57305 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EC8B8DA0141D139F00F57305 /* Build configuration list for PBXNativeTarget "BasicSplashScreen" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC8B8DA1141D139F00F57305 /* Debug */,
+				EC8B8DA2141D139F00F57305 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EC8B8D71141D139F00F57305 /* Project object */;
+}
