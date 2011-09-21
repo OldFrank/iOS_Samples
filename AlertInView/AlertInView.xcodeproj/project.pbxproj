@@ -1,0 +1,275 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EC8BCD4614267E4D00EA96B0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC8BCD4514267E4D00EA96B0 /* UIKit.framework */; };
+		EC8BCD4814267E4D00EA96B0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC8BCD4714267E4D00EA96B0 /* Foundation.framework */; };
+		EC8BCD4A14267E4D00EA96B0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC8BCD4914267E4D00EA96B0 /* CoreGraphics.framework */; };
+		EC8BCD5014267E4D00EA96B0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EC8BCD4E14267E4D00EA96B0 /* InfoPlist.strings */; };
+		EC8BCD5214267E4D00EA96B0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EC8BCD5114267E4D00EA96B0 /* main.m */; };
+		EC8BCD5614267E4D00EA96B0 /* AlertInViewAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EC8BCD5514267E4D00EA96B0 /* AlertInViewAppDelegate.m */; };
+		EC8BCD5C14267E4D00EA96B0 /* AlertInViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC8BCD5B14267E4D00EA96B0 /* AlertInViewViewController.m */; };
+		EC8BCD6714267FFA00EA96B0 /* AlertInView.m in Sources */ = {isa = PBXBuildFile; fileRef = EC8BCD6614267FFA00EA96B0 /* AlertInView.m */; };
+		ECB24ADE142A72A2005D4CCB /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECB24ADD142A72A2005D4CCB /* QuartzCore.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		EC8BCD4114267E4D00EA96B0 /* AlertInView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlertInView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC8BCD4514267E4D00EA96B0 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		EC8BCD4714267E4D00EA96B0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		EC8BCD4914267E4D00EA96B0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		EC8BCD4D14267E4D00EA96B0 /* AlertInView-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AlertInView-Info.plist"; sourceTree = "<group>"; };
+		EC8BCD4F14267E4D00EA96B0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		EC8BCD5114267E4D00EA96B0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EC8BCD5314267E4D00EA96B0 /* AlertInView-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AlertInView-Prefix.pch"; sourceTree = "<group>"; };
+		EC8BCD5414267E4D00EA96B0 /* AlertInViewAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AlertInViewAppDelegate.h; sourceTree = "<group>"; };
+		EC8BCD5514267E4D00EA96B0 /* AlertInViewAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AlertInViewAppDelegate.m; sourceTree = "<group>"; };
+		EC8BCD5A14267E4D00EA96B0 /* AlertInViewViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AlertInViewViewController.h; sourceTree = "<group>"; };
+		EC8BCD5B14267E4D00EA96B0 /* AlertInViewViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AlertInViewViewController.m; sourceTree = "<group>"; };
+		EC8BCD6514267FFA00EA96B0 /* AlertInView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlertInView.h; sourceTree = "<group>"; };
+		EC8BCD6614267FFA00EA96B0 /* AlertInView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlertInView.m; sourceTree = "<group>"; };
+		ECB24ADD142A72A2005D4CCB /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EC8BCD3E14267E4D00EA96B0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ECB24ADE142A72A2005D4CCB /* QuartzCore.framework in Frameworks */,
+				EC8BCD4614267E4D00EA96B0 /* UIKit.framework in Frameworks */,
+				EC8BCD4814267E4D00EA96B0 /* Foundation.framework in Frameworks */,
+				EC8BCD4A14267E4D00EA96B0 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EC8BCD3614267E4D00EA96B0 = {
+			isa = PBXGroup;
+			children = (
+				EC8BCD4B14267E4D00EA96B0 /* AlertInView */,
+				EC8BCD4414267E4D00EA96B0 /* Frameworks */,
+				EC8BCD4214267E4D00EA96B0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EC8BCD4214267E4D00EA96B0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EC8BCD4114267E4D00EA96B0 /* AlertInView.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EC8BCD4414267E4D00EA96B0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ECB24ADD142A72A2005D4CCB /* QuartzCore.framework */,
+				EC8BCD4514267E4D00EA96B0 /* UIKit.framework */,
+				EC8BCD4714267E4D00EA96B0 /* Foundation.framework */,
+				EC8BCD4914267E4D00EA96B0 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EC8BCD4B14267E4D00EA96B0 /* AlertInView */ = {
+			isa = PBXGroup;
+			children = (
+				EC8BCD5414267E4D00EA96B0 /* AlertInViewAppDelegate.h */,
+				EC8BCD5514267E4D00EA96B0 /* AlertInViewAppDelegate.m */,
+				EC8BCD5A14267E4D00EA96B0 /* AlertInViewViewController.h */,
+				EC8BCD5B14267E4D00EA96B0 /* AlertInViewViewController.m */,
+				EC8BCD4C14267E4D00EA96B0 /* Supporting Files */,
+				EC8BCD6514267FFA00EA96B0 /* AlertInView.h */,
+				EC8BCD6614267FFA00EA96B0 /* AlertInView.m */,
+			);
+			path = AlertInView;
+			sourceTree = "<group>";
+		};
+		EC8BCD4C14267E4D00EA96B0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EC8BCD4D14267E4D00EA96B0 /* AlertInView-Info.plist */,
+				EC8BCD4E14267E4D00EA96B0 /* InfoPlist.strings */,
+				EC8BCD5114267E4D00EA96B0 /* main.m */,
+				EC8BCD5314267E4D00EA96B0 /* AlertInView-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EC8BCD4014267E4D00EA96B0 /* AlertInView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EC8BCD6214267E4D00EA96B0 /* Build configuration list for PBXNativeTarget "AlertInView" */;
+			buildPhases = (
+				EC8BCD3D14267E4D00EA96B0 /* Sources */,
+				EC8BCD3E14267E4D00EA96B0 /* Frameworks */,
+				EC8BCD3F14267E4D00EA96B0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AlertInView;
+			productName = AlertInView;
+			productReference = EC8BCD4114267E4D00EA96B0 /* AlertInView.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EC8BCD3814267E4D00EA96B0 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = EC8BCD3B14267E4D00EA96B0 /* Build configuration list for PBXProject "AlertInView" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = EC8BCD3614267E4D00EA96B0;
+			productRefGroup = EC8BCD4214267E4D00EA96B0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EC8BCD4014267E4D00EA96B0 /* AlertInView */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EC8BCD3F14267E4D00EA96B0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC8BCD5014267E4D00EA96B0 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EC8BCD3D14267E4D00EA96B0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC8BCD5214267E4D00EA96B0 /* main.m in Sources */,
+				EC8BCD5614267E4D00EA96B0 /* AlertInViewAppDelegate.m in Sources */,
+				EC8BCD5C14267E4D00EA96B0 /* AlertInViewViewController.m in Sources */,
+				EC8BCD6714267FFA00EA96B0 /* AlertInView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		EC8BCD4E14267E4D00EA96B0 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EC8BCD4F14267E4D00EA96B0 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EC8BCD6014267E4D00EA96B0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		EC8BCD6114267E4D00EA96B0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EC8BCD6314267E4D00EA96B0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AlertInView/AlertInView-Prefix.pch";
+				INFOPLIST_FILE = "AlertInView/AlertInView-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		EC8BCD6414267E4D00EA96B0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AlertInView/AlertInView-Prefix.pch";
+				INFOPLIST_FILE = "AlertInView/AlertInView-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EC8BCD3B14267E4D00EA96B0 /* Build configuration list for PBXProject "AlertInView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC8BCD6014267E4D00EA96B0 /* Debug */,
+				EC8BCD6114267E4D00EA96B0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EC8BCD6214267E4D00EA96B0 /* Build configuration list for PBXNativeTarget "AlertInView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC8BCD6314267E4D00EA96B0 /* Debug */,
+				EC8BCD6414267E4D00EA96B0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EC8BCD3814267E4D00EA96B0 /* Project object */;
+}
