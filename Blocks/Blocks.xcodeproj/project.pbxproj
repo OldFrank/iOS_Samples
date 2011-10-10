@@ -1,0 +1,303 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EC99C81F1441FDFA0094E90E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC99C81E1441FDFA0094E90E /* UIKit.framework */; };
+		EC99C8211441FDFA0094E90E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC99C8201441FDFA0094E90E /* Foundation.framework */; };
+		EC99C8231441FDFA0094E90E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC99C8221441FDFA0094E90E /* CoreGraphics.framework */; };
+		EC99C8291441FDFA0094E90E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EC99C8271441FDFA0094E90E /* InfoPlist.strings */; };
+		EC99C82B1441FDFA0094E90E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EC99C82A1441FDFA0094E90E /* main.m */; };
+		EC99C82F1441FDFA0094E90E /* BlocksAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EC99C82E1441FDFA0094E90E /* BlocksAppDelegate.m */; };
+		EC99C8321441FDFA0094E90E /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC99C8301441FDFA0094E90E /* MainWindow.xib */; };
+		EC99C83B1441FE690094E90E /* AddressBookVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EC99C83A1441FE690094E90E /* AddressBookVC.m */; };
+		EC99C83D1441FEAA0094E90E /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC99C83C1441FEAA0094E90E /* AddressBook.framework */; };
+		ECA5345014423A71007793EF /* AddressBookManager.m in Sources */ = {isa = PBXBuildFile; fileRef = ECA5344F14423A71007793EF /* AddressBookManager.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		EC99C81A1441FDFA0094E90E /* Blocks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Blocks.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC99C81E1441FDFA0094E90E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		EC99C8201441FDFA0094E90E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		EC99C8221441FDFA0094E90E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		EC99C8261441FDFA0094E90E /* Blocks-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Blocks-Info.plist"; sourceTree = "<group>"; };
+		EC99C8281441FDFA0094E90E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		EC99C82A1441FDFA0094E90E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EC99C82C1441FDFA0094E90E /* Blocks-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Blocks-Prefix.pch"; sourceTree = "<group>"; };
+		EC99C82D1441FDFA0094E90E /* BlocksAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlocksAppDelegate.h; sourceTree = "<group>"; };
+		EC99C82E1441FDFA0094E90E /* BlocksAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlocksAppDelegate.m; sourceTree = "<group>"; };
+		EC99C8311441FDFA0094E90E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		EC99C8391441FE690094E90E /* AddressBookVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressBookVC.h; sourceTree = "<group>"; };
+		EC99C83A1441FE690094E90E /* AddressBookVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressBookVC.m; sourceTree = "<group>"; };
+		EC99C83C1441FEAA0094E90E /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		ECA5344E14423A71007793EF /* AddressBookManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressBookManager.h; sourceTree = "<group>"; };
+		ECA5344F14423A71007793EF /* AddressBookManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressBookManager.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EC99C8171441FDFA0094E90E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC99C83D1441FEAA0094E90E /* AddressBook.framework in Frameworks */,
+				EC99C81F1441FDFA0094E90E /* UIKit.framework in Frameworks */,
+				EC99C8211441FDFA0094E90E /* Foundation.framework in Frameworks */,
+				EC99C8231441FDFA0094E90E /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EC99C80F1441FDFA0094E90E = {
+			isa = PBXGroup;
+			children = (
+				EC99C8241441FDFA0094E90E /* Blocks */,
+				EC99C81D1441FDFA0094E90E /* Frameworks */,
+				EC99C81B1441FDFA0094E90E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EC99C81B1441FDFA0094E90E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EC99C81A1441FDFA0094E90E /* Blocks.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EC99C81D1441FDFA0094E90E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EC99C83C1441FEAA0094E90E /* AddressBook.framework */,
+				EC99C81E1441FDFA0094E90E /* UIKit.framework */,
+				EC99C8201441FDFA0094E90E /* Foundation.framework */,
+				EC99C8221441FDFA0094E90E /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EC99C8241441FDFA0094E90E /* Blocks */ = {
+			isa = PBXGroup;
+			children = (
+				EC99C82D1441FDFA0094E90E /* BlocksAppDelegate.h */,
+				EC99C82E1441FDFA0094E90E /* BlocksAppDelegate.m */,
+				EC99C8301441FDFA0094E90E /* MainWindow.xib */,
+				EC99C8381441FE470094E90E /* AddressBook */,
+				EC99C8251441FDFA0094E90E /* Supporting Files */,
+			);
+			path = Blocks;
+			sourceTree = "<group>";
+		};
+		EC99C8251441FDFA0094E90E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EC99C8261441FDFA0094E90E /* Blocks-Info.plist */,
+				EC99C8271441FDFA0094E90E /* InfoPlist.strings */,
+				EC99C82A1441FDFA0094E90E /* main.m */,
+				EC99C82C1441FDFA0094E90E /* Blocks-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EC99C8381441FE470094E90E /* AddressBook */ = {
+			isa = PBXGroup;
+			children = (
+				EC99C8391441FE690094E90E /* AddressBookVC.h */,
+				EC99C83A1441FE690094E90E /* AddressBookVC.m */,
+				ECA5344C14423A59007793EF /* AddressBookManager */,
+			);
+			path = AddressBook;
+			sourceTree = "<group>";
+		};
+		ECA5344C14423A59007793EF /* AddressBookManager */ = {
+			isa = PBXGroup;
+			children = (
+				ECA5344E14423A71007793EF /* AddressBookManager.h */,
+				ECA5344F14423A71007793EF /* AddressBookManager.m */,
+			);
+			path = AddressBookManager;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EC99C8191441FDFA0094E90E /* Blocks */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EC99C8351441FDFA0094E90E /* Build configuration list for PBXNativeTarget "Blocks" */;
+			buildPhases = (
+				EC99C8161441FDFA0094E90E /* Sources */,
+				EC99C8171441FDFA0094E90E /* Frameworks */,
+				EC99C8181441FDFA0094E90E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Blocks;
+			productName = Blocks;
+			productReference = EC99C81A1441FDFA0094E90E /* Blocks.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EC99C8111441FDFA0094E90E /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = EC99C8141441FDFA0094E90E /* Build configuration list for PBXProject "Blocks" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = EC99C80F1441FDFA0094E90E;
+			productRefGroup = EC99C81B1441FDFA0094E90E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EC99C8191441FDFA0094E90E /* Blocks */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EC99C8181441FDFA0094E90E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC99C8291441FDFA0094E90E /* InfoPlist.strings in Resources */,
+				EC99C8321441FDFA0094E90E /* MainWindow.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EC99C8161441FDFA0094E90E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC99C82B1441FDFA0094E90E /* main.m in Sources */,
+				EC99C82F1441FDFA0094E90E /* BlocksAppDelegate.m in Sources */,
+				EC99C83B1441FE690094E90E /* AddressBookVC.m in Sources */,
+				ECA5345014423A71007793EF /* AddressBookManager.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		EC99C8271441FDFA0094E90E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EC99C8281441FDFA0094E90E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		EC99C8301441FDFA0094E90E /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EC99C8311441FDFA0094E90E /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EC99C8331441FDFA0094E90E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		EC99C8341441FDFA0094E90E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EC99C8361441FDFA0094E90E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Blocks/Blocks-Prefix.pch";
+				INFOPLIST_FILE = "Blocks/Blocks-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		EC99C8371441FDFA0094E90E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Blocks/Blocks-Prefix.pch";
+				INFOPLIST_FILE = "Blocks/Blocks-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EC99C8141441FDFA0094E90E /* Build configuration list for PBXProject "Blocks" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC99C8331441FDFA0094E90E /* Debug */,
+				EC99C8341441FDFA0094E90E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EC99C8351441FDFA0094E90E /* Build configuration list for PBXNativeTarget "Blocks" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC99C8361441FDFA0094E90E /* Debug */,
+				EC99C8371441FDFA0094E90E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EC99C8111441FDFA0094E90E /* Project object */;
+}
