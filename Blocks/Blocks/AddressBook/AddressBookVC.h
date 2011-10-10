@@ -13,24 +13,5 @@
 
 #pragma mark - other
 - (void) safeReleaseForVariable:(id)var;
-- (BOOL) setValue:(NSString*)value atPropertyID:(ABPropertyID)key inPerson:(ABRecordRef)person;
-
-#pragma mark - create new person
-- (ABRecordRef) createNewPersonInAddressBook:(ABAddressBookRef)paramAddressBook;
-- (BOOL) addPerson:(ABRecordRef)person inAddressBook:(ABAddressBookRef)paramAddressBook;
-
-- (BOOL) setFirstName:(NSString*)firstName inPerson:(ABRecordRef)person;
-- (BOOL) setLastName:(NSString*)lastName inPerson:(ABRecordRef)person;
-
-#pragma mark - get parameters
-- (NSString*) firstNamePropertyForRecord:(ABRecordRef)record;
-- (NSString*) lastNamePropertyForRecord:(ABRecordRef)record;
-- (void)      emailPropertyForRecord:(ABRecordRef)record;
-
-#pragma mark - retrieve all people
-- (void) retrieveAllPeopleFromAddressBook:(ABAddressBookRef)addressBook;
-
-#pragma mark - get reference to addressbook
-- (void) referenceToAddressBook;
 
 @end

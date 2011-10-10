@@ -7,9 +7,11 @@
 //
 
 #import "AddressBookVC.h"
+#import "AddressBookManager.h"
 
 @implementation AddressBookVC
 
+#pragma mark - Others
 - (void) safeReleaseForVariable:(id)var
 {
     if (var != nil) 
@@ -19,126 +21,11 @@
     }
 }
 
-#pragma mark - AddressBook methods
-- (ABRecordRef) createNewPersonInAddressBook:(ABAddressBookRef)paramAddressBook
+- (void) allPeopleTest
 {
-    /* Check the address book parameter */ 
-    if (paramAddressBook == nil)
-    {
-        NSLog(@"The address book is nil.");
-        return nil; 
-    }
+    AddressBookManager *manager = [[AddressBookManager alloc] init];
     
-    /* Just create an empty person entry */
-    ABRecordRef person = ABPersonCreate();
-    
-    if (person == nil)
-    {
-        NSLog(@"Failed to create a new person.");
-    
-        return nil; 
-    }
-    
-    return person;
-}
-
-- (BOOL) addPerson:(ABRecordRef)person inAddressBook:(ABAddressBookRef)paramAddressBook
-{
-    CFErrorRef  error = nil;
-    BOOL    couldAddPerson = ABAddressBookAddRecord(paramAddressBook, person,&error);
-    
-    /* Add the person record to the address book. We have NOT saved yet */
-    if (couldAddPerson == YES)
-    {
-        NSLog(@"Successfully added the new person.");
-    } 
-    else 
-    {
-        NSLog(@"Could not add a new person."); 
-    }
-    
-    return couldAddPerson;
-}
-
-- (BOOL) setValue:(NSString*)value atPropertyID:(ABPropertyID)key inPerson:(ABRecordRef)person
-{
-    /* Set the first name of the person */
-    CFErrorRef error = nil;
-    BOOL couldSetValue = ABRecordSetValue(person, key, value,&error);
-    
-    if (couldSetValue == YES)
-    {
-        NSLog(@"Successfully set %@.",value);
-    }
-    else 
-    {
-        NSLog(@"Could not set %@.",value); 
-    }
-    
-    return couldSetValue;
-}
-
-- (BOOL) setFirstName:(NSString*)firstName inPerson:(ABRecordRef)person
-{   
-    return [self setValue:firstName atPropertyID:kABPersonFirstNameProperty inPerson:person];
-}
-
-- (BOOL) setLastName:(NSString*)lastName inPerson:(ABRecordRef)person
-{
-    return [self setValue:lastName atPropertyID:kABPersonLastNameProperty inPerson:person];
-}
-
-#pragma mark - ...
-- (NSString*) firstNamePropertyForRecord:(ABRecordRef)record
-{
-    return (NSString *)ABRecordCopyValue(record,kABPersonFirstNameProperty);
-}
-
-- (NSString*) lastNamePropertyForRecord:(ABRecordRef)record
-{
-    return (NSString *) ABRecordCopyValue(record,kABPersonLastNameProperty);
-}
-
-- (void) emailPropertyForRecord:(ABRecordRef)record
-{
-    if (record == nil)
-    {
-        return; 
-    }
-    
-    ABMultiValueRef emails = ABRecordCopyValue(record, kABPersonEmailProperty);
-    
-    /* This contact does not have an email property */ 
-    if (emails == nil)
-    {
-        return; 
-    }
-    
-    /* Go through all the emails */ 
-    NSUInteger numberOfEmails = ABMultiValueGetCount(emails);
-    NSLog(@"number of emails : %d",numberOfEmails);
-    
-    for (NSUInteger emailCounter = 0;emailCounter < numberOfEmails; emailCounter++)
-    {
-        /* Get the label of the email (if any) */
-        NSString *emailLabel            = (NSString *) ABMultiValueCopyLabelAtIndex(emails, emailCounter);
-        NSString *localizedEmailLabel   = (NSString *) ABAddressBookCopyLocalizedLabel((CFStringRef)emailLabel);
-        
-        /* And then get the email address itself */ 
-        NSString *email = (NSString *) ABMultiValueCopyValueAtIndex(emails, emailCounter);
-        NSLog(@"Label = %@, Localized Label = %@, Email = %@", emailLabel, localizedEmailLabel, email);
-        
-        [self safeReleaseForVariable:email];
-        [self safeReleaseForVariable:emailLabel];
-        [self safeReleaseForVariable:localizedEmailLabel];
-    }
-    
-    CFRelease(emails);
-}
-
-- (void) retrieveAllPeopleFromAddressBook:(ABAddressBookRef)addressBook
-{
-    CFArrayRef arrayOfAllPeople = ABAddressBookCopyArrayOfAllPeople(addressBook);
+    CFArrayRef arrayOfAllPeople = [manager retrieveAllPeople];
     
     if (arrayOfAllPeople != nil)
     {
@@ -146,76 +33,79 @@
         
         for (peopleCounter = 0;peopleCounter < CFArrayGetCount(arrayOfAllPeople); peopleCounter++)
         {
-            ABRecordRef thisPerson = CFArrayGetValueAtIndex(arrayOfAllPeople, peopleCounter);
+            ABRecordRef thisPerson = [manager personInArray:arrayOfAllPeople atIndex:peopleCounter];
             NSLog(@"%@", thisPerson);
             
             /* Use the [thisPerson] address book record */ 
-            NSString *firstName = [self firstNamePropertyForRecord:thisPerson];
-            NSString *lastName  = [self lastNamePropertyForRecord:thisPerson];
-            
+            NSString *firstName = [manager firstNamePropertyForRecord:thisPerson];
+            NSString *lastName  = [manager lastNamePropertyForRecord:thisPerson];            
             NSLog(@"First Name = %@", firstName); 
             NSLog(@"Last Name = %@", lastName); 
             
-            [self safeReleaseForVariable:firstName];
-            [self safeReleaseForVariable:lastName];
+            [manager emailPropertyForRecord:thisPerson];
             
-            [self emailPropertyForRecord:thisPerson];
+            [manager safeReleaseForVariable:firstName];
+            [manager safeReleaseForVariable:lastName];
         }
         CFRelease(arrayOfAllPeople); 
-    } /* if (allPeople != nil){ */
+    }
+    
+    [manager release];
 }
 
-- (void) referenceToAddressBook
+- (void) createAndSaveNewPerson
 {
-    ABAddressBookRef addressBook = ABAddressBookCreate();
+    AddressBookManager *manager = [[AddressBookManager alloc] init];
     
-    if (addressBook != nil)
-    {
-        NSLog(@"Successfully accessed the address book.");
-        
-        /* Work with the address book here */
-        [self retrieveAllPeopleFromAddressBook:addressBook];
-        
-        /* Let's see if we have made any changes to the address book or not, before attempting to save it */
-        if (ABAddressBookHasUnsavedChanges(addressBook) == YES)
-        { 
-            /* Now decide if you want to save the changes to the address book */
-            NSLog(@"Changes were found in the address book.");
-            BOOL doYouWantToSaveChanges = YES;
-            
-            /* We can make a decision to save or revert the address book back to how it was before */
-            if (doYouWantToSaveChanges == YES)
-            {
-                CFErrorRef saveError = NULL;
-                if (ABAddressBookSave(addressBook, &saveError) == YES)
-                { 
-                    /* We successfully saved our changes to the address book */
-                } 
-                else 
-                {
-                    /* We failed to save the changes. You can now
-                     access the [saveError] variable to find out
-                     what the error is */ 
-                }
-            } 
-            else 
-            {
-                /* We did NOT want to save the changes to the address book so let's revert it to how it was before */
-                ABAddressBookRevert(addressBook);
-            } /* if (doYouWantToSaveChanges == YES){ */
-        } 
-        else 
-        {
-            /* We have not made any changes to the address book */
-            NSLog(@"No changes to the address book."); 
-        }
-        
-        CFRelease(addressBook);
-    } 
-    else 
-    {
-        NSLog(@"Could not access the address book."); 
-    }    
+    ABRecordRef newPerson = [manager createNewPerson];
+    [manager setFirstName:@"CT" inPerson:newPerson];
+    [manager setLastName:@"Ursita" inPerson:newPerson];
+    [manager addPerson:newPerson];
+    [manager saveAddressBookChanges];
+    [manager releaseReference:newPerson];
+    
+    [manager release];
+}
+
+- (void) createAndSaveNewGroup
+{
+    AddressBookManager *manager = [[AddressBookManager alloc] init];
+    
+    ABRecordRef newGroup = [manager createNewGroup];
+    [manager setName:@"Friends" inGroup:newGroup];
+    [manager addGroup:newGroup];
+    [manager saveAddressBookChanges];
+    [manager releaseReference:newGroup];
+    
+    [manager release];
+}
+
+- (void) createUserAndGroupAndAddUserIntoGroup
+{
+    AddressBookManager *manager = [[AddressBookManager alloc] init];
+    
+    // New User
+    ABRecordRef newPerson = [manager createNewPerson];
+    [manager setFirstName:@"JP" inPerson:newPerson];
+    [manager setLastName:@"SP" inPerson:newPerson];
+    [manager addPerson:newPerson];
+    [manager saveAddressBookChanges];
+    
+    // New Group
+    ABRecordRef newGroup = [manager createNewGroup];
+    [manager setName:@"Poveda" inGroup:newGroup];
+    [manager addGroup:newGroup];
+    [manager saveAddressBookChanges];
+    
+    // Adding user into group
+    [manager addPerson:newPerson toGroup:newGroup];
+    [manager saveAddressBookChanges];
+    
+    // Releasing
+    [manager releaseReference:newPerson];
+    [manager releaseReference:newGroup];
+    
+    [manager release];
 }
 
 #pragma mark - View lifecycle
@@ -223,7 +113,17 @@
 {
     [super viewDidLoad];
     
-    [self referenceToAddressBook];
+    // TEST 1
+    [self allPeopleTest];
+    
+    // TEST 2
+    [self createAndSaveNewPerson];
+    
+    // TEST 3
+    [self createAndSaveNewGroup];
+    
+    // TEST 4
+    [self createUserAndGroupAndAddUserIntoGroup];
 }
 
 - (void)viewDidUnload

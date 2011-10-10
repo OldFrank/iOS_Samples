@@ -10,6 +10,12 @@
 
 @implementation AddressBookManager
 
+- (void) releaseReference:(ABRecordRef)ref
+{
+    CFRelease(ref);
+}
+
+#pragma mark - Constructor
 - (id)init
 {
     if ((self = [super init])) 
@@ -25,51 +31,74 @@
     return self;
 }
 
-- (void) saveAddressBookChanges
+- (void) dealloc
 {
-    /* Let's see if we have made any changes to the address book or not, before attempting to save it */
-    if (ABAddressBookHasUnsavedChanges(addressBook) == YES)
-    { 
-        /* Now decide if you want to save the changes to the address book */
-        NSLog(@"Changes were found in the address book.");
-        BOOL doYouWantToSaveChanges = YES;
-        
-        /* We can make a decision to save or revert the address book back to how it was before */
-        if (doYouWantToSaveChanges == YES)
-        {
-            CFErrorRef saveError = NULL;
-            if (ABAddressBookSave(addressBook, &saveError) == YES)
-            { 
-                /* We successfully saved our changes to the address book */
-            } 
-            else 
-            {
-                /* We failed to save the changes. You can now
-                 access the [saveError] variable to find out
-                 what the error is */ 
-            }
-        } 
-        else 
-        {
-            /* We did NOT want to save the changes to the address book so let's revert it to how it was before */
-            ABAddressBookRevert(addressBook);
-        }
+    CFRelease(addressBook);
+    
+    [super dealloc];
+}
+
+#pragma mark - GROUP : create / add
+- (ABRecordRef) createNewGroup
+{
+    ABRecordRef group = ABGroupCreate();
+    if (group == nil)
+    {
+        NSLog(@"Failed to create a new group.");
+        return(nil); 
+    }
+    
+    return group;
+}
+
+- (BOOL) addGroup:(ABRecordRef)group
+{
+    CFErrorRef  error = nil;
+    BOOL    couldAddGroup = ABAddressBookAddRecord(addressBook, group,&error);
+
+    /* Add the group record to the address book. We have NOT saved yet */
+    if (couldAddGroup == YES)
+    {
+        NSLog(@"Successfully added the new group.");
     } 
     else 
     {
-        /* We have not made any changes to the address book */
-        NSLog(@"No changes to the address book."); 
-    }    
+        NSLog(@"Could not add a new group."); 
+    }
+    
+    return couldAddGroup;
 }
 
-- (void) revertAddressBookChanges
+#pragma mark - GROUP : set parameters
+- (BOOL) setName:(NSString*)name inGroup:(ABRecordRef)group
 {
-    /* We did NOT want to save the changes to the address book so let's revert it to how it was before */
-    ABAddressBookRevert(addressBook);
+    return [self setValue:name atGroupProperty:kABGroupNameProperty inGroup:group];
+}
+
+- (BOOL) addPerson:(ABRecordRef)paramPerson toGroup:(ABRecordRef)paramGroup
+{
+    if (paramPerson == nil || paramGroup == nil)
+    {
+        NSLog(@"Invalid parameters are given.");
+        return NO; 
+    }
+    
+    CFErrorRef error = nil;
+    
+    /* Now attempt to add the person entry to the group */
+    BOOL result = ABGroupAddMember(paramGroup, paramPerson,&error);
+    
+    if (result == NO)
+    {
+        NSLog(@"Could not add the person to the group.");
+        return NO; 
+    }
+    
+    return result;
 }
 
 #pragma mark - Create / Add person
-- (ABRecordRef) createNewPersonInAddressBook
+- (ABRecordRef) createNewPerson
 {
     /* Check the address book parameter */ 
     if (addressBook == nil)
@@ -107,6 +136,40 @@
     }
     
     return couldAddPerson;
+}
+
+#pragma mark - Save / Revert
+- (void) saveAddressBookChanges
+{
+    /* Let's see if we have made any changes to the address book or not, before attempting to save it */
+    if (ABAddressBookHasUnsavedChanges(addressBook) == YES)
+    { 
+        /* Now decide if you want to save the changes to the address book */
+        NSLog(@"Changes were found in the address book.");
+        
+        CFErrorRef saveError = NULL;
+        if (ABAddressBookSave(addressBook, &saveError) == YES)
+        { 
+            /* We successfully saved our changes to the address book */
+        } 
+        else 
+        {
+            /* We failed to save the changes. You can now
+             access the [saveError] variable to find out
+             what the error is */ 
+        }    
+    } 
+    else 
+    {
+        /* We have not made any changes to the address book */
+        NSLog(@"No changes to the address book."); 
+    }    
+}
+
+- (void) revertAddressBookChanges
+{
+    /* We did NOT want to save the changes to the address book so let's revert it to how it was before */
+    ABAddressBookRevert(addressBook);
 }
 
 #pragma mark - Set AddressBookParameters
@@ -174,6 +237,11 @@
     return ABAddressBookCopyArrayOfAllPeople(addressBook);
 }
 
+- (ABRecordRef) personInArray:(CFArrayRef)array atIndex:(NSInteger)index
+{
+    return CFArrayGetValueAtIndex(array, index);
+}
+
 @end
 
 @implementation AddressBookManager (Private)
@@ -191,6 +259,24 @@
     /* Set the first name of the person */
     CFErrorRef error = nil;
     BOOL couldSetValue = ABRecordSetValue(person, key, value,&error);
+    
+    if (couldSetValue == YES)
+    {
+        NSLog(@"Successfully set %@.",value);
+    }
+    else 
+    {
+        NSLog(@"Could not set %@.",value); 
+    }
+    
+    return couldSetValue;
+}
+
+- (BOOL) setValue:(NSString*)value atGroupProperty:(ABPropertyID)key inGroup:(ABRecordRef)group
+{
+    /* Set the first name of the person */
+    CFErrorRef error = nil;
+    BOOL couldSetValue = ABRecordSetValue(group, key, value, &error);
     
     if (couldSetValue == YES)
     {
